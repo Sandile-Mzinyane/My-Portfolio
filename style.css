@@ -133,7 +133,14 @@ a:hover {
   border: 1px solid var(--border);
   border-radius: 50%;
   cursor: pointer;
+  text-decoration: none;
   transition: color 200ms ease, background-color 200ms ease, border-color 200ms ease;
+}
+
+#hamburger-nav .theme-toggle:hover,
+#hamburger-nav .theme-toggle:focus,
+#hamburger-nav .theme-toggle:active {
+  text-decoration: none;
 }
 
 .theme-toggle:hover {
