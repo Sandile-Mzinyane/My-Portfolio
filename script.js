@@ -51,3 +51,36 @@ document.addEventListener("DOMContentLoaded", function () {
   handleScroll(); 
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+  const themeToggleButtons = document.querySelectorAll(".theme-toggle");
+  const root = document.documentElement;
+
+  function updateThemeButtons() {
+    const isDark = root.dataset.theme === "dark";
+
+    themeToggleButtons.forEach((button) => {
+      button.setAttribute("aria-pressed", String(isDark));
+      button.setAttribute(
+        "aria-label",
+        isDark ? "Switch to light mode" : "Switch to dark mode"
+      );
+    });
+  }
+
+  themeToggleButtons.forEach((button) => {
+    button.addEventListener("click", function () {
+      const isDark = root.dataset.theme !== "dark";
+
+      if (isDark) {
+        root.dataset.theme = "dark";
+      } else {
+        delete root.dataset.theme;
+      }
+
+      localStorage.setItem("portfolio-theme", isDark ? "dark" : "light");
+      updateThemeButtons();
+    });
+  });
+
+  updateThemeButtons();
+});
