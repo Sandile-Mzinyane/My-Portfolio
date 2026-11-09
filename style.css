@@ -438,10 +438,17 @@ article .icon {
 
 .certificate-preview {
   width: 100%;
-  aspect-ratio: 16 / 10;
+  aspect-ratio: 4 / 5;
   overflow: hidden;
   border-radius: 1rem;
   background: rgb(250, 250, 250);
+}
+
+.certificate-preview img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .certificate-preview iframe {
