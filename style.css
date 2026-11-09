@@ -459,6 +459,13 @@ article .icon {
   display: flex;
   align-items: center;
   justify-content: center;
+  text-decoration: none;
+}
+
+#certifications .project-btn:hover,
+#certifications .project-btn:focus,
+#certifications .project-btn:active {
+  text-decoration: none;
 }
 
 .color-container {
